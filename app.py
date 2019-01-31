@@ -21,7 +21,7 @@ def streamwav():
         myComposer = cp.Composer(notes, 5)
         myComposer.export_as_wav("harry", os.path.join(dir_path, "output",""))
 
-        with open(os.path.join(dir_path, "output", "harry.wav"), "rb") as fwav:
+        with open(os.path.join("output", "harry.wav"), "rb") as fwav:
             data = fwav.read(1024)
             while data:
                 yield data
