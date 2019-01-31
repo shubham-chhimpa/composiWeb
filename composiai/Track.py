@@ -6,7 +6,7 @@ import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-path_to_wav = os.path.join(dir_path, "note")
+path_to_wav = os.path.join(os.path.dirname(dir_path), "note","")
 
 class Track:
     sound = AudioSegment.silent(0)
@@ -42,7 +42,7 @@ class Track:
                 self.sound = self.sound[:pos + nth_sound.duration_seconds * 1000]
 
     def export_to_wav(self, output_file_name, path):
-        self.sound.export(path + output_file_name + '.wav', format="wav")
+        self.sound.export(os.path.join(path,  output_file_name + '.wav') , format="wav")
 
     def export_to_mp3(self, output_file_name, path, path_to_ffmpeg):
         pydub.AudioSegment.converter = path_to_ffmpeg
@@ -54,7 +54,7 @@ class Track:
             note = note_octave_list[i]
             if note == ' ':
                 continue
-            nth_sound = AudioSegment.from_file(path_to_wav + note + '.wav')
+            nth_sound = AudioSegment.from_file(os.path.join(path_to_wav, note + '.wav'))
             total_duration = total_duration + (nth_sound.duration_seconds * 1000)
         return total_duration
 

@@ -8,7 +8,7 @@ import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-path_to_wav = os.path.join(dir_path, "note")
+path_to_wav = os.path.join(os.path.dirname(dir_path), "note","")
 
 class Key:
 
@@ -47,7 +47,7 @@ class Key:
 
         CHUNK = 1024
 
-        wf = wave.open(path_to_wav + note + '.wav', 'rb')
+        wf = wave.open(os.path.join(path_to_wav, note + '.wav'), 'rb')
 
         # instantiate PyAudio (1)
         p = pyaudio.PyAudio()
@@ -87,7 +87,7 @@ class Key:
             print(note_octave_list[i])
             print(i)
 
-            nth_sound = AudioSegment.from_file(path_to_wav + note + '.wav')
+            nth_sound = AudioSegment.from_file(os.path.join(path_to_wav, note + '.wav'))
             #print(nth_sound.duration_seconds)
             if i == 0:
                 sound = sound.append(nth_sound,0)
