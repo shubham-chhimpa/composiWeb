@@ -4,8 +4,11 @@ import numpy as np
 import wave
 from pydub import AudioSegment
 from pydub.playback import play as p
+import os
 
-path_to_wav = '.\\note\\'
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+path_to_wav = os.path.join(dir_path, "note")
 
 class Key:
 

@@ -19,12 +19,13 @@ def streamwav():
         #harryPotterNotes = "-B,E,G,F#,E,B,A,F#, , ,E,G,F#,Eb,E,-B"
         myComposer = cp.Composer(notes, 5)
         myComposer.export_as_wav("harry", dir_path + "\\output\\")
-        with open(dir_path + "\\output\\harry.wav", "rb") as fwav:
+
+        with open(os.path.join(dir_path, "output", "harry.wav"), "rb") as fwav:
             data = fwav.read(1024)
             while data:
                 yield data
                 data = fwav.read(1024)
-        os.remove(dir_path + "\\output\\harry.wav")
+        os.remove(os.path.join(dir_path, "output", "harry.wav"))
     return Response(generate(), mimetype="audio/x-wav")
 
 

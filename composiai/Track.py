@@ -2,9 +2,11 @@
 from pydub import AudioSegment
 from pydub.playback import play as p
 import pydub
+import os
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
-path_to_wav = '.\\note\\'
+path_to_wav = os.path.join(dir_path, "note")
 
 class Track:
     sound = AudioSegment.silent(0)
