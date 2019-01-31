@@ -15,7 +15,7 @@ def streamwav():
     notes = request.json["notes"]
     def generate():
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        print(dir_path)
+        print(os.listdir(dir_path))
 
         #harryPotterNotes = "-B,E,G,F#,E,B,A,F#, , ,E,G,F#,Eb,E,-B"
         myComposer = cp.Composer(notes, 5)
