@@ -1,16 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 
 <body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Composi Web</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container" id="loader">
+    <br><br>
+    <div class="row center">
+      <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+
+
+      <h4 class="header center orange-text">Input Example</h4>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Game of Throne Theme</span>
+              <p>G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, ,C, ,D#,F,G, ,C, ,D#,F,D,-A#,D#,F,D,-A#,
+                ,F, ,-A#, ,D#,D,F, ,-A#, ,D#,D,C,-G#,-G#,-A#,C,-F,-G#,-A#,C,-F,-G#,-A#,C</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <div class="input-field col s6">
+          <input id="input_text" value="-B,E,G,F#,E,B,A,F#, , ,E,G,F#,Eb,E,-B" type="text" data-length="50">
+          <label for="input_text">Input notes</label>
+        </div>
+        <div class="input-field col s6">
+          <button onclick="getTrack()" class="btn waves-effect waves-light" type="submit" name="action">Get Music
+          </button>
+        </div>
+
+      </div>
+      <div class="row center">
+        <audio id="aid" controls>
+          <source id="sid" src="" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+  <!--
+
+
 
 
 
@@ -18,7 +102,7 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input id="input_text" type="text" data-length="10">
+          <input id="input_text" type="text" data-length="50">
           <label for="input_text">Input text</label>
         </div>
       </div>
@@ -38,12 +122,17 @@
 
 
 
- 
+
+  -->
+
+
+  <!--  Scripts-->
+
   <script type="text/javascript" src="{{ url_for('static', filename = 'app.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'init.js') }}"></script>
 
 
-
-  </script>
 </body>
 
 </html>
+<script type="text/javascript" src="{{ url_for('static', filename = 'app.js') }}"></script>

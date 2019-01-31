@@ -44,8 +44,12 @@
     //   .catch((error) => {
     //     console.log(error);
     //   });
+    $("#loader").hide();
+    
 
 function getTrack(){
+  $("#index-banner").hide();
+  $("#loader").show();
     var request = new XMLHttpRequest();   // new HttpRequest instance
     request.open("POST", "/gettrack", true);
     request.responseType = 'arraybuffer';
@@ -57,6 +61,8 @@ function getTrack(){
     let aut = document.getElementById("sid");
     aut.src = objectUrl;
     document.getElementById("aid").load();
+    $("#loader").hide();
+    $("#index-banner").show();
       console.log(evt);
     console.log(blob);
     }
