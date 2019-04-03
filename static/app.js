@@ -46,62 +46,62 @@
 //   });
 $("#loader").hide();
 
-//
-//function getTrack() {
-//  $("#index-banner").hide();
-//  $("#loader").show();
-//  var request = new XMLHttpRequest();   // new HttpRequest instance
-//  request.open("POST", "/gettrack", true);
-//  request.responseType = 'arraybuffer';
-//  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-//  request.onload = function (evt) {
-//
-//    var blob = new Blob([request.response], { type: 'audio/wav' });
-//    var objectUrl = URL.createObjectURL(blob);
-//    let aut = document.getElementById("sid");
-//    aut.src = objectUrl;
-//    document.getElementById("aid").load();
-//    $("#loader").hide();
-//    $("#index-banner").show();
-//    console.log(evt);
-//    console.log(blob);
-//  }
-//
-//  let gnote = $("#input_text").val();
-//
-//  console.log(gnote);
-//
-//  request.send(JSON.stringify({ "notes": gnote }));
-//}
-
-
 
 function getTrack() {
-  $("#index-banner").hide();
-  $("#loader").show();
-  var request = new XMLHttpRequest();   // new HttpRequest instance
-  request.open("POST", "/gettrack", true);
-  request.responseType = 'arraybuffer';
-  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  request.onload = function (evt) {
+ $("#index-banner").hide();
+ $("#loader").show();
+ var request = new XMLHttpRequest();   // new HttpRequest instance
+ request.open("POST", "/gettrack", true);
+ request.responseType = 'arraybuffer';
+ request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+ request.onload = function (evt) {
 
-    var blob = new Blob([request.response], { type: 'audio/mpeg' });
-    var objectUrl = URL.createObjectURL(blob);
-    let aut = document.getElementById("sid");
-    aut.src = objectUrl;
-    document.getElementById("aid").load();
-    $("#loader").hide();
-    $("#index-banner").show();
-    console.log(evt);
-    console.log(blob);
-  }
+   var blob = new Blob([request.response], { type: 'audio/wav' });
+   var objectUrl = URL.createObjectURL(blob);
+   let aut = document.getElementById("sid");
+   aut.src = objectUrl;
+   document.getElementById("aid").load();
+   $("#loader").hide();
+   $("#index-banner").show();
+   console.log(evt);
+   console.log(blob);
+ }
 
-  let gnote = $("#input_text").val();
+ let gnote = $("#input_text").val();
 
-  console.log(gnote);
+ console.log(gnote);
 
-  request.send(JSON.stringify({ "notes": gnote }));
+ request.send(JSON.stringify({ "notes": gnote }));
 }
+
+
+
+// function getTrack() {
+//   $("#index-banner").hide();
+//   $("#loader").show();
+//   var request = new XMLHttpRequest();   // new HttpRequest instance
+//   request.open("POST", "/gettrack", true);
+//   request.responseType = 'arraybuffer';
+//   request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+//   request.onload = function (evt) {
+
+//     var blob = new Blob([request.response], { type: 'audio/mpeg' });
+//     var objectUrl = URL.createObjectURL(blob);
+//     let aut = document.getElementById("sid");
+//     aut.src = objectUrl;
+//     document.getElementById("aid").load();
+//     $("#loader").hide();
+//     $("#index-banner").show();
+//     console.log(evt);
+//     console.log(blob);
+//   }
+
+//   let gnote = $("#input_text").val();
+
+//   console.log(gnote);
+
+//   request.send(JSON.stringify({ "notes": gnote }));
+// }
 
 
 getTrack();
@@ -127,52 +127,68 @@ getTrack();
 //  $("#input_text").val(input_text + ',C#');
 // });
 $('.note-btn').unbind().click(function (e) {
-  console.log("C button clicked", e.target.id);
   btnId = e.target.id;
-  console.log(btnId === 'C');
   if (btnId == 'C') {
-    console.log("C button clicked");
     let input_text = $("#input_text").val();
-    console.log(input_text);
     $("#input_text").val('');
-    console.log($("#input_text").val());
-    console.log(input_text + ',C')
     $("#input_text").val(input_text + ',C');
   }
   else if (btnId == 'Csharp') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',C#');
   }
   else if (btnId == 'D') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',D');
   }
   else if (btnId == 'Dsharp') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',D#');
   }
   else if (btnId == 'E') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',E');
   }
   else if (btnId == 'F') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',F');
   }
   else if (btnId == 'Fsharp') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',F#');
   }
   else if (btnId == 'G') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',G');
   }
   else if (btnId == 'Gsharp') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',G#');
   }
   else if (btnId == 'A') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',A');
   }
   else if (btnId == 'Asharp') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',A#');
   }
   else if (btnId == 'B') {
-
+    let input_text = $("#input_text").val();
+    $("#input_text").val('');
+    $("#input_text").val(input_text + ',B');
   }
   else {
-
+console.log("some error occor");
   }
 });
