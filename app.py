@@ -36,9 +36,9 @@ def streamwav():
         ## ffmpeg mp3 generation code
         # /app/vendor/ffmpeg/ffmpeg
 
-        myComposer.export_as_mp3("harry", os.path.join(dir_path, "output","","/app/vendor/ffmpeg/ffmpeg"))
+        myComposer.export_as_mp3("harry", os.path.join(dir_path, "output",""),"/app/vendor/ffmpeg/ffmpeg")
 
-        with open(os.path.join("output", "harry.mp3"), "rb") as fwav:
+        with open(os.path.join("output", "harry.mpeg"), "rb") as fwav:
             data = fwav.read(1024)
             while data:
                 yield data
