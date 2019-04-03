@@ -46,6 +46,35 @@
 //   });
 $("#loader").hide();
 
+//
+//function getTrack() {
+//  $("#index-banner").hide();
+//  $("#loader").show();
+//  var request = new XMLHttpRequest();   // new HttpRequest instance
+//  request.open("POST", "/gettrack", true);
+//  request.responseType = 'arraybuffer';
+//  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+//  request.onload = function (evt) {
+//
+//    var blob = new Blob([request.response], { type: 'audio/wav' });
+//    var objectUrl = URL.createObjectURL(blob);
+//    let aut = document.getElementById("sid");
+//    aut.src = objectUrl;
+//    document.getElementById("aid").load();
+//    $("#loader").hide();
+//    $("#index-banner").show();
+//    console.log(evt);
+//    console.log(blob);
+//  }
+//
+//  let gnote = $("#input_text").val();
+//
+//  console.log(gnote);
+//
+//  request.send(JSON.stringify({ "notes": gnote }));
+//}
+
+
 
 function getTrack() {
   $("#index-banner").hide();
@@ -56,7 +85,7 @@ function getTrack() {
   request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   request.onload = function (evt) {
 
-    var blob = new Blob([request.response], { type: 'audio/wav' });
+    var blob = new Blob([request.response], { type: 'audio/mpeg' });
     var objectUrl = URL.createObjectURL(blob);
     let aut = document.getElementById("sid");
     aut.src = objectUrl;
@@ -73,6 +102,7 @@ function getTrack() {
 
   request.send(JSON.stringify({ "notes": gnote }));
 }
+
 
 getTrack();
 

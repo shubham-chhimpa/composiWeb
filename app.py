@@ -19,15 +19,32 @@ def streamwav():
 
         #harryPotterNotes = "-B,E,G,F#,E,B,A,F#, , ,E,G,F#,Eb,E,-B"
         myComposer = cp.Composer(notes, 5)
-        myComposer.export_as_wav("harry", os.path.join(dir_path, "output",""))
 
-        with open(os.path.join("output", "harry.wav"), "rb") as fwav:
+
+
+
+        #     myComposer.export_as_wav("harry", os.path.join(dir_path, "output",""))
+        #
+        #     with open(os.path.join("output", "harry.wav"), "rb") as fwav:
+        #         data = fwav.read(1024)
+        #         while data:
+        #             yield data
+        #             data = fwav.read(1024)
+        #     #os.remove(os.path.join(dir_path, "output", "harry.wav"))
+        # return Response(generate(), mimetype="audio/x-wav")
+
+        ## ffmpeg mp3 generation code
+        # /app/vendor/ffmpeg/ffmpeg
+
+        myComposer.export_as_mp3("harry", os.path.join(dir_path, "output","","/app/vendor/ffmpeg/ffmpeg"))
+
+        with open(os.path.join("output", "harry.mp3"), "rb") as fwav:
             data = fwav.read(1024)
             while data:
                 yield data
                 data = fwav.read(1024)
         #os.remove(os.path.join(dir_path, "output", "harry.wav"))
-    return Response(generate(), mimetype="audio/x-wav")
+    return Response(generate(), mimetype="audio/mpeg")
 
 
 if __name__ == '__main__':
