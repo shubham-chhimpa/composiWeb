@@ -71,15 +71,36 @@
       </div>
 
       <div class="row center">
-        <div class="input-field col s6">
+        <!-- <div class="input-field col s6">
           <input id="input_text" value="-B,E,G,F#,E,B,A,F#, , ,E,G,F#,Eb,E,-B" type="text" data-length="50">
           <label for="input_text">Input notes</label>
+        </div> -->
+
+      
+        <div class="input-field col s8">
+          <textarea id="input_text" class="materialize-textarea"> </textarea>
+          <label for="input_text">Input notes</label>
         </div>
-        <div class="input-field col s6">
-          <button onclick="getTrack()" class="btn waves-effect waves-light" type="submit" name="action">Get Music
+        <div class="input-field col s2">
+          <button onclick="getTrack()" class="btn waves-effect waves-light" type="submit" name="action">Fetch Music
           </button>
         </div>
-
+      </div>
+      <div class="row center">
+        <div class="col s12 m6">
+          <a id="C" class="btn-floating btn-small waves-effect waves-light red note-btn">C</a>
+          <a id="Csharp" class="btn-floating btn-small waves-effect waves-light red note-btn">C#</a>
+          <a id="D" class="btn-floating btn-small waves-effect waves-light red note-btn">D</a>
+          <a id="Dsharp" class="btn-floating btn-small waves-effect waves-light red">D#</a>
+          <a id="E" class="btn-floating btn-small waves-effect waves-light red">E</a>
+          <a id="F" class="btn-floating btn-small waves-effect waves-light red">F</a>
+          <a id="Fsharp" class="btn-floating btn-small waves-effect waves-light red">F#</a>
+          <a id="G" class="btn-floating btn-small waves-effect waves-light red">G</a>
+          <a id="Gsharp" class="btn-floating btn-small waves-effect waves-light red">G#</a>
+          <a id="A" class="btn-floating btn-small waves-effect waves-light red">A</a>
+          <a id="Asharp" class="btn-floating btn-small waves-effect waves-light red">A#</a>
+          <a id="B" class="btn-floating btn-small waves-effect waves-light red">B</a>
+        </div>
       </div>
       <div class="row center">
         <audio id="aid" controls>
