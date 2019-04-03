@@ -45,7 +45,7 @@ class Track:
         self.sound.export(os.path.join(path,  output_file_name + '.wav') , format="wav")
 
     def export_to_mp3(self, output_file_name, path, path_to_ffmpeg):
-        pydub.AudioSegment.converter = path_to_ffmpeg
+        pydub.AudioSegment.ffmpeg = path_to_ffmpeg
         self.sound.export(os.path.join(path,output_file_name + '.mp3'), format="mp3")
 
     def get_track_duration_ms(self, note_octave_list):
