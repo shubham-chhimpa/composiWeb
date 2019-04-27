@@ -23,13 +23,13 @@ def streamwav():
 
         myComposer.export_as_mp3("harry", os.path.join(dir_path, "output", ""),os.path.join("","app","vendor","ffmpeg","ffmpeg"))
 
-        with open(os.path.join("output", "harry.wav"), "rb") as fwav:
+        with open(os.path.join("output", "harry.mp3"), "rb") as fwav:
                 data = fwav.read(1024)
                 while data:
                     yield data
                     data = fwav.read(1024)
             #os.remove(os.path.join(dir_path, "output", "harry.wav"))
-    return Response(generate(), mimetype="audio/x-wav")
+    return Response(generate(), mimetype="audio/mpeg")
 
         # ffmpeg mp3 generation code
         # /app/vendor/ffmpeg/ffmpeg
