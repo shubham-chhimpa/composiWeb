@@ -136,7 +136,7 @@ function isEmpty(){
     var a;
 
     if(empty == true){
-        a = "a";
+        a = "";
 
       	empty = false;
   
