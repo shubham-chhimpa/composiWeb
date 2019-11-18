@@ -133,23 +133,17 @@ getTrack();
 var empty = true;
 
 function isEmpty(){
-    var a;
 
-    if(empty == true){
-        a = "";
+  var a;
 
-      	empty = false;
-  
-
-  
-      }else{
-  
-        a = ",";
-  
-      }
-  
+  if(empty == true){
+      a = "";
+      empty = false;
+     }else{
+       a = ",";
+     }
       return a;
-  }
+   }
 
 
 $('.note-btn').unbind().click(function (e) {
