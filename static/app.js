@@ -126,69 +126,81 @@ getTrack();
 // console.log(input_text + ',C#')
 //  $("#input_text").val(input_text + ',C#');
 // });
+
+var isEmpty = true;
+
 $('.note-btn').unbind().click(function (e) {
   btnId = e.target.id;
+  
+  if(isEmpty){
+  	isEmpty = false;
+  	return " ";
+  }else{
+  	return ",";
+  }
+  
   if (btnId == 'C') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',C');
+    $("#input_text").val(input_text + isEmpty()+'C');
   }
   else if (btnId == 'Csharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',C#');
+    $("#input_text").val(input_text + isEmpty()+'C#');
   }
   else if (btnId == 'D') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',D');
+    $("#input_text").val(input_text + isEmpty()+'D');
   }
   else if (btnId == 'Dsharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',D#');
+    $("#input_text").val(input_text + isEmpty()+'D#');
   }
   else if (btnId == 'E') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',E');
+    $("#input_text").val(input_text + isEmpty() + 'E');
   }
   else if (btnId == 'F') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',F');
+    $("#input_text").val(input_text + isEmpty() +'F');
   }
   else if (btnId == 'Fsharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',F#');
+    $("#input_text").val(input_text + isEmpty()+ 'F#');
   }
   else if (btnId == 'G') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',G');
+    $("#input_text").val(input_text + isEmpty() +'G');
   }
   else if (btnId == 'Gsharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',G#');
+    $("#input_text").val(input_text + isEmpty() +'G#');
   }
   else if (btnId == 'A') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',A');
+    $("#input_text").val(input_text +isEmpty() + 'A');
   }
   else if (btnId == 'Asharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',A#');
+    $("#input_text").val(input_text +isEmpty() + 'A#');
   }
   else if (btnId == 'B') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',B');
+    $("#input_text").val(input_text +isEmpty() + 'B');
   }
   else {
 console.log("some error occor");
+  }
   }
 });
