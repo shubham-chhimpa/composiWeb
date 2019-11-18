@@ -127,17 +127,36 @@ getTrack();
 //  $("#input_text").val(input_text + ',C#');
 // });
 
-var isEmpty = true;
+//added by Sanjay Soni
+
+
+var empty = true;
+
+function isEmpty(){
+    var a;
+
+    if(empty == true){
+        a = "a";
+
+      	empty = false;
+  
+
+  
+      }else{
+  
+        a = ",";
+  
+      }
+  
+      return a;
+  }
+
 
 $('.note-btn').unbind().click(function (e) {
   btnId = e.target.id;
   
-  if(isEmpty){
-  	isEmpty = false;
-  	return " ";
-  }else{
-  	return ",";
-  }
+
+
   
   if (btnId == 'C') {
     let input_text = $("#input_text").val();
