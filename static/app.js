@@ -129,21 +129,25 @@ getTrack();
 
 //added by Sanjay Soni
 
+//Onclick any of notes button this will verify is inputarea is empty or not.
+//if empty then isEmpty() will return null else ","
 
-var empty = true;
+var empty;
+var input_text = document.getElementById("input_text").innerText;
+input_text.length()>0 ? empty = false : empty = true;
 
 function isEmpty(){
 
-  var a;
+  var outputString;
 
   if(empty == true){
-      a = "";
+      outputString = "";
       empty = false;
      }else{
-       a = ",";
+       outputString = ",";
      }
-      return a;
-   }
+      return outputString;
+ }
 
 
 $('.note-btn').unbind().click(function (e) {
