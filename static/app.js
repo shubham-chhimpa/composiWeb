@@ -126,69 +126,99 @@ getTrack();
 // console.log(input_text + ',C#')
 //  $("#input_text").val(input_text + ',C#');
 // });
+
+//added by Sanjay Soni
+
+//Onclick any of notes button this will verify is inputarea is empty or not.
+//if empty then isEmpty() will return null else ","
+
+var empty;
+var input_text = document.getElementById("input_text").innerText;
+input_text.length>0 ? empty = false : empty = true;
+
+function isEmpty(){
+
+  var outputString;
+
+  if(empty == true){
+      outputString = "";
+      empty = false;
+     }else{
+       outputString = ",";
+     }
+      return outputString;
+ }
+
+
 $('.note-btn').unbind().click(function (e) {
   btnId = e.target.id;
+  
+
+
+  
   if (btnId == 'C') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',C');
+    $("#input_text").val(input_text + isEmpty()+'C');
   }
   else if (btnId == 'Csharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',C#');
+    $("#input_text").val(input_text + isEmpty()+'C#');
   }
   else if (btnId == 'D') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',D');
+    $("#input_text").val(input_text + isEmpty()+'D');
   }
   else if (btnId == 'Dsharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',D#');
+    $("#input_text").val(input_text + isEmpty()+'D#');
   }
   else if (btnId == 'E') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',E');
+    $("#input_text").val(input_text + isEmpty() + 'E');
   }
   else if (btnId == 'F') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',F');
+    $("#input_text").val(input_text + isEmpty() +'F');
   }
   else if (btnId == 'Fsharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',F#');
+    $("#input_text").val(input_text + isEmpty()+ 'F#');
   }
   else if (btnId == 'G') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',G');
+    $("#input_text").val(input_text + isEmpty() +'G');
   }
   else if (btnId == 'Gsharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',G#');
+    $("#input_text").val(input_text + isEmpty() +'G#');
   }
   else if (btnId == 'A') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',A');
+    $("#input_text").val(input_text +isEmpty() + 'A');
   }
   else if (btnId == 'Asharp') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',A#');
+    $("#input_text").val(input_text +isEmpty() + 'A#');
   }
   else if (btnId == 'B') {
     let input_text = $("#input_text").val();
     $("#input_text").val('');
-    $("#input_text").val(input_text + ',B');
+    $("#input_text").val(input_text +isEmpty() + 'B');
   }
   else {
 console.log("some error occor");
   }
+  }
 });
+ 
