@@ -134,7 +134,7 @@ getTrack();
 
 var empty;
 var input_text = document.getElementById("input_text").innerText;
-input_text.length()>0 ? empty = false : empty = true;
+input_text.length>0 ? empty = false : empty = true;
 
 function isEmpty(){
 
